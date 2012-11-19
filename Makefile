@@ -1,12 +1,9 @@
-lCXXFLAGS := -g -Wall -Werror
-LDFLAGS := 
-HOST := $(shell uname -s)
-ifeq ($(HOST),Darwin)
-CXXFLAGS += -I/opt/local/include
-LDFLAGS += -L/opt/local/lib
-endif
+CXXFLAGS := -g -Wall -Werror
 LDFLAGS += -lboost_regex
 
 all: example
 
 example: example.o
+
+clean:
+	rm -f *~ *.o example
