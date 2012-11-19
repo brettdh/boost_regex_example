@@ -1,5 +1,5 @@
 CXXFLAGS := -g -Wall -Werror
-LDFLAGS += -lboost_regex
+LDFLAGS := -lboost_regex
 
 all: example
 
